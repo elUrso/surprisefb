@@ -1,0 +1,14 @@
+{
+  "name": "surprisefb",
+  "version": "1.0.0",
+  "description": "The surprise server",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Vitor Silva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
