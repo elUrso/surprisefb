@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<style>
+			.friend {
+				padding: 0.5rem;
+			}
+			.friend>img {
+					border-radius: 25px;
+			}
+		</style>
+	</head>
+	<body onload="getLista()">
+		<div id="friendList"></div>
+		<script>
+			let _f = (x) => "<div class=\"friend\"><img src=" + x + " alt=\"\"></div>"
+			let getLista = () => {
+				let req = new XMLHttpRequest()
+				var friends = "ex"
+				req.open("GET", friends, true);
+				req.onreadystatechange = () => {
+					if(req.readyState == 4 && req.status == 200) {
+							const _graph = "https://graph.facebook.com/v2.12/"
+							let friendlist = JSON.parse(req.responseText)
+							let html = document.getElementById("friendList")
+							console.log(friendlist)
+							html.innerHTML = friendlist.friends.map((x) => x.id).map((x) => x + "/picture/url").map((x) => _graph + x).map(_f).join("")
+					}
+				}
+				req.send();				
+			}
+		</script>
+	</body>
+</html>
+
+<!-- ZIP
+c.__proto__.zip = (d) => {
+a = []
+for(i in c) {
+a.push([c[i], d[i]])}
+return a}
+-->

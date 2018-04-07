@@ -1,0 +1,32 @@
+{
+    "friends" : [
+    {
+      "name": "Mayron Alves",
+      "id": "10203737874757727"
+    },
+    {
+      "name": "Victor Sena Molero",
+      "id": "860592923956600"
+    },
+    {
+      "name": "Victor Portella",
+      "id": "751104411590935"
+    },
+    {
+      "name": "Raphael Ribeiro",
+      "id": "1007089319339824"
+    },
+    {
+      "name": "Wander Souza",
+      "id": "802170703202926"
+    },
+    {
+      "name": "Leonardo Thiago",
+      "id": "556381937815280"
+    },
+    {
+      "name": "Tom Junior",
+      "id": "100005328663743"
+    }
+  ]
+}
