@@ -10,6 +10,10 @@
   "author": "Vitor Silva",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "diskdb": "^0.1.17",
+    "express": "^4.16.3",
+    "fb": "^2.0.0"
   }
 }
