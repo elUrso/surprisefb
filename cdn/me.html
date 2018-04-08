@@ -45,7 +45,7 @@
 				var id = location.search.substring(4, location.search.length)
 				var _name = document.getElementById('name')
 				let reqt = new XMLHttpRequest()
-				reqt.open("GET", _graph + id , true);
+				reqt.open("GET", _graph + id + "?fields=name" , true);
 				reqt.onreadystatechange = function() {
 					if(reqt.readyState == 4 && reqt.status == 200) {
 							console.log(reqt.responseText)
