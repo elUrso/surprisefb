@@ -8,7 +8,7 @@
 	<body onload="getMe()">
 		<container>
 			<header>
-				<back href="/friends">
+				<back href="/friends" onclick="goBack()">
 					<img src="/res/back.svg"/>
 				</back>
 			</header>
@@ -21,7 +21,10 @@
 		</container>
 		<script>
 			let getMe = () => {
-				
+				let id = location.search.substring(4, location.search.length)
+			}
+			let goBack = () => {
+				window.location("/friends")
 			}
 		</script>
 	</body>
