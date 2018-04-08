@@ -41,23 +41,35 @@ me #image {
   margin: 0.5em 0;
 }
 
+.produtos {
+  overflow-y: scroll;
+}
+
 .produto {
   background: #F4F4F4;
   margin-bottom: 0.5em;
+
   display: flex;
-  flex-fow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
   padding: 0.5em;
   height: 30vh;
-  width: 100vw;
+
+  border-radius: 10px;
+  padding: 0em 2em 0em 2em;
+  width: 70vw;
 }
 
-.produto.pr-img {
+.produto.img-pr {
   height: 70%;
+  overflow: hidden;
 }
 
 prtxt {
   display: flex;
   flex-flow: column nowrap;
+  font-size: 2.5em;
 }
 
 nome {
