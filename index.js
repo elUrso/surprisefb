@@ -44,7 +44,7 @@ let genToken = (c) => {
 	FB.api('oauth/access_token', {
     client_id: '582797802099987',
     client_secret: 'b8ceab9b09bb39786778cd0685852e44',
-    redirect_uri: path + "token",
+    redirect_uri: path + "usertoken",
     code: c
 	}, function (res) {
 			if(!res || res.error) {
