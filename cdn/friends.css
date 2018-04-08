@@ -39,10 +39,11 @@ friends {
   display: flex;
   margin-bottom: 1em;
   min-height: 8vh;
-  min-width: 70vw;
+  width: 70vw;
   font-size: 2em;
   justify-content: flex-start;
   align-items: center;
+  overflow:hidden;
 }
 
 .friend > img {
@@ -54,7 +55,7 @@ friends {
 .friend > p {
   grid-column: 3/4;
   grid-row: 2/3;
-  padding: 0em 1em 0em 1em
+  padding: 0em 1em 0em 1em;
 }
 
 .profile-solid.icon {
