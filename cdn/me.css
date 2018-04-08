@@ -41,4 +41,53 @@ me #image {
   margin: 0.5em 0;
 }
 
-.button
+.produto {
+  background: #F4F4F4;
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-fow: row nowrap;
+  padding: 0.5em;
+  height: 30vh;
+  width: 100vw;
+}
+
+.produto.pr-img {
+  height: 70%;
+}
+
+prtxt {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+nome {
+
+}
+
+category {
+
+}
+
+.button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  border: solid 1px transparent;
+
+  min-height: 2.5em;
+  text-align: center;
+}
+
+.button.buy-mini-button {
+  background: $buy-background;
+  color: $buy-color;
+
+  min-width: 15vw;
+  border-radius: 0.5em;
+
+  margin-bottom: 0.5em;
+  margin-left: 40vw;
+}
+
