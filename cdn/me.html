@@ -37,6 +37,7 @@
 					}
 				}
 				req.send();
+				getLista();
 			}
 			function _f(x) {
 				return "<div class=\"produto\"><nome>" + x.name + "</nome><category>" + x.categories.join(", ") +"</category><img src=\""+ x.image +"\"/><a href=\""+x.site +"\"><span class=\"button\"></span></a></div>"
