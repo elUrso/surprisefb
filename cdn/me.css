@@ -43,12 +43,13 @@ me #image {
 }
 
 .produtos {
-  overflow-y: scroll;
+  overflow-y: visible;
+  margin-top: 1em;
 }
 
 .produto {
   background: #F4F4F4;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 
   display: flex;
   flex-flow: row nowrap;
@@ -62,9 +63,6 @@ me #image {
   width: 90vw;
 }
 
-.produto:first-child {
-  margin-top: 1.5em;
-}
 
 .img-pr {
   height: 70%;
@@ -100,8 +98,8 @@ category {
 }
 
 .button.buy-mini-button {
-  background: $buy-background;
-  color: $buy-color;
+  background: #00B600;
+  color: #000000;
 
   min-width: 15vw;
   border-radius: 0.5em;
