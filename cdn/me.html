@@ -38,6 +38,23 @@
 				}
 				req.send();
 				getLista();
+				getNome();
+			}
+			function getNome() {
+				var _graph = "https://graph.facebook.com/v2.12/"
+				var id = location.search.substring(4, location.search.length)
+				var _name = document.getElementById('name')
+				let req = new XMLHttpRequest()
+				req.open("GET", _graph + id , true);
+				req.onreadystatechange = function() {
+					if(req.readyState == 4 && req.status == 200) {
+							var myInfo = JSON.parse(req.responseText)
+							_name.innerHTML = myInfo.name;
+					}
+				}
+				req.send();
+				getLista();
+				getNome();
 			}
 			function _f(x) {
 				return "<div class=\"produto\"><nome>" + x.name + "</nome><category>" + x.categories.join(", ") +"</category><img src=\""+ x.image +"\"/><a href=\""+x.site +"\"><span class=\"button\"></span></a></div>"
