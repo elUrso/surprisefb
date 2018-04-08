@@ -32,10 +32,9 @@ me {
   border: 1px solid #DDD;
   border-radius: 10px;
   background-color: #F4F4F4;
-  display: inline-grid;
-  grid-template-columns: 1em 50px auto;
-  grid-template-rows: 1em auto 1em;
-  margin-bottom: 1em;
+	margin-bottom: 1em;
+	margin-left: 0.5em;
+	margin-top: 0.5em;
 }
 
 me #image {

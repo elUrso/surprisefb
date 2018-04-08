@@ -18,7 +18,7 @@
 				</div>
 				<name id="name">
 				</name>
-				<div class="produtos">
+				<div class="produtos" id="produtos">
 					<div class="produto">
 						<nome></nome>
 						<category></category>
@@ -40,6 +40,20 @@
 							let myInfo = JSON.parse(req.responseText)
 							let name = document.getElementById("name")
 							name.innerHTML = myInfo.name
+					}
+				}
+				req.send();
+			}
+			function getLista() {
+				let req = new XMLHttpRequest()
+				var friends = "/amazon.JSON"
+				req.open("GET", friends, true);
+				req.onreadystatechange = () => {
+					if(req.readyState == 4 && req.status == 200) {
+							let produtos = JSON.parse(req.responseText)
+							let html = document.getElementById("produtos")
+							console.log(produtos)
+							html.innerHTML = produtos.map((x) => _f).join("\n");
 					}
 				}
 				req.send();
