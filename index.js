@@ -40,6 +40,7 @@ let loginURL = (s) => {
   	redirect_uri: _path})
 }
 
+
 let genToken = (c, n) => {
 	FB.api('oauth/access_token', {
     client_id: '582797802099987',
