@@ -97,3 +97,14 @@ category {
   text-align: center;
 }
 
+.button.buy-mini-button {
+  background: #00B600;
+  color: #000000;
+
+  min-width: 15vw;
+  border-radius: 0.5em;
+
+  margin-bottom: 0.5em;
+  margin-left: 40vw;
+}
+
