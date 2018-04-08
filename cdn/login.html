@@ -6,30 +6,31 @@
 		</title>
 		<style>
 			body {
-				display: grid;
+				display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
 				margin: 0;
 				padding: 0;
-				grid-template-columns: auto min-content auto;
 				width: 100%;
 				height: 100%;
 				background-color: #FFB06B;
 			}
 			container {
-				grid-column: 2/3;
-				display: inline-grid;
-				grid-template-rows: auto min-content 3.2em auto;
+				display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 3.3vh;
 			}
 			logo {
-				grid-row: 2/3;
 				height: 16em;
-				justify-self: center;
 			}
 			logo>img {
 				height: 100%;
 				width: auto;
 			}
 			login {
-				grid-row: 3/4;
 				margin: 4em;
 				width: 20em;
 				height: 100%;
@@ -87,9 +88,9 @@
 								}
 							}
 							oauth.send();
-					}	
+					}
 				}
-				req.send();			
+				req.send();
 			}
 			let _body = () => {
 				let session = -1;
