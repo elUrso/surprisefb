@@ -35,7 +35,8 @@ FB.options(fb_options)
 let loginURL = (s) => {
 	let _path = path + "usertoken"
 	return FB.getLoginUrl({
-  	scope: 'email,user_likes,user_birthday,user_friends',
+		scope: 'email,user_likes,user_birthday,user_friends',
+		response_type: 'token',
   	redirect_uri: _path})
 }
 
