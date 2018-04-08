@@ -33,7 +33,7 @@ const fb_options = {
 FB.options(fb_options)
 
 let loginURL = (s) => {
-	let _path = path + "usertoken/" + s
+	let _path = path + "usertoken"
 	return FB.getLoginUrl({
   	scope: 'email,user_likes,user_birthday,user_friends',
   	redirect_uri: _path})
@@ -72,7 +72,12 @@ app.post('/new_session', (req, res) => {
 })
 
 app.post('/oauth', (req, res) => {
-	res.send(loginURL(req.cookies.session))
+	res.send(loginURL(req.cookies.session)
+)})
+
+app.get("/usertoken", (req, res) => {
+	console.log(req)
+	res.send("Hi!")
 })
 
 app.listen(port, () => {
