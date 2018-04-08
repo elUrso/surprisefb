@@ -4,15 +4,16 @@
 			Surprise : Friends
 		</title>
 		<link rel="stylesheet" type="text/css" href="/friends.css"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 	</head>
 	<body onload="getLista()">
 		<container>
 			<header>
 				<user href="/me">
-					<img src="/res/user.svg"/>
+          <i class="material-icons">person</i>
 				</user>
 				<search>
-					<img src="/res/search.svg"/>
+          <i class="material-icons">search</i>
 				</search>
 			</header>
 			<friends id="friendList">
@@ -33,7 +34,7 @@
 							html.innerHTML = friendlist.map((x) => [x.id, x.name]).map((x) => [x[0] + "/picture/url", x[1], x[0]]).map((x) => [_graph + x[0], x[1], x[2]]).map(_f).join("")
 					}
 				}
-				req.send();	
+				req.send();
 			}
 			let goToUser = (id) => {
 				location.replace("/me?id=" + id)
