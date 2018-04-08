@@ -154,6 +154,7 @@ app.get("/usertoken", (req, res) => {
 })
 
 app.get("/likes", (req, res) => {
+	console.log(db.users[0])
 	console.log(db.users.find({id: req.query.id}))
 	let user =  db.users.find({id: req.query.id})[0]
 	let token = user.token
