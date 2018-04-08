@@ -44,16 +44,16 @@
 				var _graph = "https://graph.facebook.com/v2.12/"
 				var id = location.search.substring(4, location.search.length)
 				var _name = document.getElementById('name')
-				let req = new XMLHttpRequest()
-				req.open("GET", _graph + id , true);
-				req.onreadystatechange = function() {
-					if(req.readyState == 4 && req.status == 200) {
-							console.log(req.responseText)
-							var myInfo = JSON.parse(req.responseText)
+				let reqt = new XMLHttpRequest()
+				reqt.open("GET", _graph + id , true);
+				reqt.onreadystatechange = function() {
+					if(reqt.readyState == 4 && reqt.status == 200) {
+							console.log(reqt.responseText)
+							var myInfo = JSON.parse(reqt.responseText)
 							_name.innerHTML = myInfo.name;
 					}
 				}
-				req.send();
+				reqt.send();
 			}
 			function _f(x) {
 				return "<div class=\"produto\"><nome>" + x.name + "</nome><category>" + x.categories.join(", ") +"</category><img src=\""+ x.image +"\"/><a href=\""+x.site +"\"><span class=\"button\"></span></a></div>"
