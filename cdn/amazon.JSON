@@ -1,0 +1,34 @@
+[{
+	"name": "Ghost Stories",
+		"site":
+			"https://www.amazon.com/Roald-Dahls-Book-Ghost-Stories/dp/0374518688/ref=sr_1_5?ie=UTF8&qid=1523182729&sr=8-5&keywords=ghost+stories",
+		"categories": ["book", "Ronald Dahl", "Thriller"],
+		"image":
+			"https://images-na.ssl-images-amazon.com/images/I/5112zomUI7L._SX332_BO1,204,203,200_.jpg"
+}, {
+	"name": "Far Cry 5 - PS4",
+		"site":
+			"https://www.amazon.com/Far-Cry-5-PlayStation-4-Standard/dp/B071J1S2M7/ref=sr_1_2?s=videogames&ie=UTF8&qid=1523182898&sr=1-2&keywords=far%2Bcry%2B5&th=1",
+		"categories": ["game", "Ubisoft", "PS4", "Shooter"],
+		"image":
+			"https://images-na.ssl-images-amazon.com/images/I/91ASDwyZjrL._AC_SX215_.jpg"
+}, {
+	"name": "Bohemian Rhapsody",
+		"site":
+			"https://www.amazon.com/Bohemian-Rhapsody/dp/B0157E47K2/ref=sr_1_3?ie=UTF8&qid=1523182973&sr=8-3&keywords=queen",
+		"categories": ["music", "Queen",
+		"Rock", "A Night At The Opera"],
+		"image":
+			"https://images-na.ssl-images-amazon.com/images/I/41HmQjj0moL._SS500.jpg"
+}, {
+	"name": "The Mountain Kitty
+		T-Shirt",
+		"site":
+			"https://www.amazon.com/Mountain-Expressions-T-Shirt-Gotcha-Medium/dp/B071JG7H37/ref=sr_1_5?s=videogames&ie=UTF8&qid=1523183159&sr=1-5&keywords=shirt",
+		"categories":
+			["clothes",
+		"kitties",
+		"t-shirt", "cute"],
+		"image":
+			"https://images-na.ssl-images-amazon.com/images/I/51T7rXBkV2L._AC_US218_.jpg"
+}]
