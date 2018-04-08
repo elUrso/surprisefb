@@ -14,20 +14,20 @@
 				</back>
 			</header>
 			<me id="me">
-				<image id="image">
-				</image>
+				<div id="image">
+				</div>
 				<name id="name">
 				</name>
 			</me>
 		</container>
 		<script>
-			let getMe = () => {
-				const _graph = "https://graph.facebook.com/v2.12/"
-				let id = location.search.substring(4, location.search.length)
+			function getMe() {
+				var _graph = "https://graph.facebook.com/v2.12/"
+				var id = location.search.substring(4, location.search.length)
 				document.getElementById('image').innerHTML = "<img src=\""+ _graph + id + "/picture/url\"/>"
 				let req = new XMLHttpRequest()
 				req.open("GET", _graph + id , true);
-				req.onreadystatechange = () => {
+				req.onreadystatechange = function() {
 					if(req.readyState == 4 && req.status == 200) {
 							let myInfo = JSON.parse(req.responseText)
 							let name = document.getElementById("name")
@@ -36,8 +36,8 @@
 				}
 				req.send();
 			}
-			let goBack = () => {
-				window.location("/friends")
+			function goBack() {
+				window.replace("/friends")
 			}
 		</script>
 	</body>

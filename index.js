@@ -90,6 +90,11 @@ db.connect('db', ['tokens', 'sessions', 'users'])
 
 // Helper Functions
 
+let getLikes = (t, res) => {
+	let path = "https://graph.facebook.com/v2.12/me/likes?access_token=" + t
+	res.redirect(path)
+}
+
 let getFriends = (t, res) => {
 	let path = "https://graph.facebook.com/v2.12/me/friends?access_token=" + t
 	res.redirect(path)
@@ -146,6 +151,13 @@ app.get("/usertoken", (req, res) => {
 	genToken(c, n)
 	console.log("Gud Luck")
 	res.redirect("/friends")
+})
+
+app.get("/likes", (req, res) => {
+	console.log(db.users.find({id: req.query.id}))
+	let user =  db.users.find({id: req.query.id})[0]
+	let token = user.token
+	getLikes(token, res)
 })
 
 app.get("/friendList", (req, res) => {
