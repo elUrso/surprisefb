@@ -16,8 +16,8 @@
 			<me id="me">
 				<div id="image">
 				</div>
-				<name id="name">
-				</name>
+				<div id="name">
+				</div>
 				<div class="produtos" id="produtos">
 				</div>
 			</me>
@@ -48,6 +48,7 @@
 				req.open("GET", _graph + id , true);
 				req.onreadystatechange = function() {
 					if(req.readyState == 4 && req.status == 200) {
+							console.log(req.responseText)
 							var myInfo = JSON.parse(req.responseText)
 							_name.innerHTML = myInfo.name;
 					}
