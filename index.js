@@ -116,7 +116,7 @@ let isEmpty = (x) => {
 }
 
 let isValid = (x) => {
-	if(db.sessions.find({session: Number(x.session)})) return true;
+	if(db.sessions.find({session: Number(x.session)}[0])) return true;
 	return false;
 }
 

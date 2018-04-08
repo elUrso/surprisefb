@@ -31,7 +31,7 @@
 							let friendlist = JSON.parse(req.responseText).data
 							let html = document.getElementById("friendList")
 							console.log(friendlist)
-							html.innerHTML = friendlist.friends.map((x) => x.id).map((x) => x + "/picture/url").map((x) => _graph + x).map(_f).join("")
+							html.innerHTML = friendlist.map((x) => x.id).map((x) => x + "/picture/url").map((x) => _graph + x).map(_f).join("")
 					}
 				}
 				req.send();	
