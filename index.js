@@ -61,6 +61,28 @@ let genToken = (c) => {
 	return t
 }
 
+let extendToken = (t) => {
+	let et = ""
+	FB.api('oauth/access_token', {
+    client_id: '582797802099987',
+    client_secret: 'b8ceab9b09bb39786778cd0685852e44',
+    grant_type: 'fb_exchange_token',
+    fb_exchange_token: t
+	}, function (res) {
+    if(!res || res.error) {
+        console.log(!res ? 'error occurred' : res.error);
+        return;
+    }
+ 
+    var accessToken = res.access_token;
+		var expires = res.expires ? res.expires : 0;
+		console.log(accessToken)
+		et = accessToken
+		return accessToken
+	});
+	return et
+}
+
 // Configure DB
 db.connect('db', ['tokens', 'sessions', 'users'])
 
@@ -98,9 +120,15 @@ app.post('/oauth', (req, res) => {
 )})
 
 app.get("/usertoken", (req, res) => {
+	let c, t, et
 	console.log(req)
-	console.log(req.query.code)
-	console.log(genToken(req.query.code))
+	c = req.query.code
+	console.log(c)
+	t = genToken(req.query.code)
+	console.log(t)
+	et = extendToken(t)
+	console.log(et)
+	console.log("Gud Luck")
 	res.send("Hi!")
 })
 
