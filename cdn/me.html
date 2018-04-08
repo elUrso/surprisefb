@@ -47,10 +47,10 @@
 				req.open("GET", friends, true);
 				req.onreadystatechange = () => {
 					if(req.readyState == 4 && req.status == 200) {
-							let produtos = JSON.parse(req.responseText)
+							let ll = JSON.parse(req.responseText)
 							let html = document.getElementById("produtos")
 							console.log(produtos)
-							html.innerHTML = produtos.map((x) => _f).join("\n");
+							html.innerHTML = ll.map((x) => _f(x)).join("\n");
 					}
 				}
 				req.send();
