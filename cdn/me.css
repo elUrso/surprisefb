@@ -52,7 +52,7 @@ me #image {
   margin-bottom: 1.5em;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   padding: 0.5em;
@@ -63,6 +63,16 @@ me #image {
   width: 90vw;
 }
 
+content2 {
+	display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+content {
+	align-self: flex-end;
+}
 
 .img-pr {
   height: 70%;
