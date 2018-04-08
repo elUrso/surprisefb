@@ -23,7 +23,7 @@
 			</friends>
 		</container>
 		<script>
-			let _f = (x) => "<div class=\"friend\"><img src=" + x + " alt=\"\"></div>"
+			let _f = (x) => "<div class=\"friend\"><img src=" + x[0] + " alt=\"\"><p class=\"name\">" + x[1] + "</p></div>"
 			let getLista = () => {
 				let req = new XMLHttpRequest()
 				var friends = "/friendList"
@@ -34,7 +34,7 @@
 							let friendlist = JSON.parse(req.responseText).data
 							let html = document.getElementById("friendList")
 							console.log(friendlist)
-							html.innerHTML = friendlist.map((x) => x.id).map((x) => x + "/picture/url").map((x) => _graph + x).map(_f).join("")
+							html.innerHTML = friendlist.map((x) => [x.id, x.name]).map((x) => [x[0] + "/picture/url", x[1]]).map((x) => [_graph + x[0], x[1]]).map(_f).join("")
 					}
 				}
 				req.send();	
