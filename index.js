@@ -39,8 +39,7 @@ let loginURL = (s) => {
   	redirect_uri: _path})
 }
 
-let genToken = (c) => {
-	let t = ""
+let genToken = (c, n) => {
 	FB.api('oauth/access_token', {
     client_id: '582797802099987',
     client_secret: 'b8ceab9b09bb39786778cd0685852e44',
@@ -54,15 +53,15 @@ let genToken = (c) => {
 	
 			var accessToken = res.access_token;
 			var expires = res.expires ? res.expires : 0;
+			console.log('c')
+			console.log(c)
 			console.log(accessToken)
-			t =  accessToken
-			return accessToken
+			extendToken(accessToken, c, n)
 	});
 	return t
 }
 
-let extendToken = (t) => {
-	let et = ""
+let extendToken = (t, c, n) => {
 	FB.api('oauth/access_token', {
     client_id: '582797802099987',
     client_secret: 'b8ceab9b09bb39786778cd0685852e44',
@@ -76,11 +75,11 @@ let extendToken = (t) => {
  
     var accessToken = res.access_token;
 		var expires = res.expires ? res.expires : 0;
+		let et = accessToken
+		console.log('et')
 		console.log(accessToken)
-		et = accessToken
-		return accessToken
+		db.sessions.update({session: n}, {session: n, token: et, valids: true})
 	});
-	return et
 }
 
 // Configure DB
@@ -122,14 +121,9 @@ app.post('/oauth', (req, res) => {
 app.get("/usertoken", (req, res) => {
 	let c, t, et, n;
 	n = Number(req.cookies.session)
-	console.log(req)
 	c = req.query.code
-	console.log(c)
-	t = genToken(req.query.code)
-	console.log(t)
-	et = extendToken(t)
-	console.log(et)
-	db.sessions.update({session: n}, {session: n, token: et, valids: true})
+	t = genToken(c, n)
+	
 	console.log("Gud Luck")
 	res.send("Hi!")
 })
