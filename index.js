@@ -93,7 +93,7 @@ db.connect('db', ['tokens', 'sessions', 'users'])
 let getFriends = (t, res) => {
 	path = "https://graph.facebook.com/v2.12/me/friends?access_token=" + t
 	res.redirect(path)
-}
+}	
 
 let updateUserToken = (t) => {
 	const path = "https://graph.facebook.com/v2.12/me?access_token=" + t
@@ -103,7 +103,7 @@ let updateUserToken = (t) => {
 			return;
 		}
 		json = JSON.parse(body)
-		db.users.update({id: json.id}, {id: json.id, token: et}, {upsert: true})
+		db.users.update({id: json.id}, {id: json.id, token: t}, {upsert: true})
 	})
 
 }
@@ -116,7 +116,7 @@ let isEmpty = (x) => {
 }
 
 let isValid = (x) => {
-	if(db.sessions.find({session: x.session})) return true;
+	if(db.sessions.find({session: Number(x.session)})) return true;
 	return false;
 }
 
@@ -126,7 +126,7 @@ app.get('/', (req, res) => {
 	if(isEmpty(req.cookies) || isValid(req.cookies)) {
 		res.redirect("/login")
 	} else {
-		res.redirect("/app")
+		res.redirect("/friends")
 }})
 
 app.post('/new_session', (req, res) => {
