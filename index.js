@@ -77,7 +77,8 @@ let extendToken = (t, c, n) => {
 		let et = accessToken
 		console.log('et')
 		console.log(accessToken)
-		db.sessions.update({session: n}, {session: n, token: et, valids: true})
+		console.log(n, et)
+		db.sessions.update({session: n}, {session: n, token: et, valid: true})
 	});
 }
 
