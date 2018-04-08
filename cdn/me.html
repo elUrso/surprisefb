@@ -13,18 +13,18 @@
           <i class="material-icons" style="font-size: 3em;">arrow_back</i>
 				</back>
 			</header>
-			<me id="me">
-				<!--<div id="image">
+			<!--<me id="me">
+				<div id="image">
 				</div>
 				<div id="name">
-				</div>-->
-			</me>
+				</div>
+			</me>-->
 			<div class="produtos" id="produtos">
 				</div>
 		</container>
 		<script>
 			function getMe() {
-				var _graph = "https://graph.facebook.com/v2.12/"
+				/*var _graph = "https://graph.facebook.com/v2.12/"
 				var id = location.search.substring(4, location.search.length)
 				document.getElementById('image').innerHTML = "<img src=\""+ _graph + id + "/picture/url\"/>"
 				let req = new XMLHttpRequest()
@@ -36,9 +36,9 @@
 							name.innerHTML = myInfo.name
 					}
 				}
-				req.send();
+				req.send();*/
 				getLista();
-				getNome();
+				/*getNome();*/
 			}
 			function getNome() {
 				var _graph = "https://graph.facebook.com/v2.12/"
@@ -56,7 +56,7 @@
 				reqt.send();
 			}
 			function _f(x) {
-				return "<div class=\"produto\"><nome>" + x.name + "</nome><category>" + x.categories.join(", ") +"</category><img src=\""+ x.image +"\"/><a href=\""+x.site +"\"><span class=\"button\"></span></a></div>"
+				return "<div class=\"produto\"><div class=\"img-pr\"><img src=\""+ x.image +"\"/></div><prtxt><nome>" + x.name + "</nome><category>" + x.categories.join(", ") +"</category></prtxt><a href=\""+x.site +"\"><span class=\"button\"></span></a></div>"
 			}
 			function getLista() {
 				let req = new XMLHttpRequest()
