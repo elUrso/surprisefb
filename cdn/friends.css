@@ -17,19 +17,16 @@ container {
 }
 
 header {
-  grid-column: 2/3;
-  grid-row: 1/2;
   display: flex;
   justify-content: space-between;
+  font-size: 3em;
+  margin: 0 1em;
 }
 
 friends {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  padding: 0em 2em 0em 2em;
   min-width: 70vw;
   display: flex;
-  flex-flow row nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   padding: 1em;
@@ -39,19 +36,19 @@ friends {
   border: 1px solid #DDD;
   border-radius: 10px;
   background-color: #F4F4F4;
-  display: inline-grid;
-  grid-template-columns: 1em 50px auto;
-  grid-template-rows: 1em auto 1em;
+  display: flex;
   margin-bottom: 1em;
   min-height: 8vh;
+  min-width: 70vw;
   font-size: 2em;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .friend > img {
 	border-radius: 25px;
-  grid-column: 2/3;
-  grid-row: 2/3;
   min-height: 2.5em;
+  margin-left: 0.5em;
 }
 
 .friend > p {
