@@ -21,20 +21,19 @@
 		</container>
 		<script>
 			let getMe = () => {
+				const _graph = "https://graph.facebook.com/v2.12/"
 				let id = location.search.substring(4, location.search.length)
 				document.getElementById('image').innerHTML = "<img src=\""+ _graph + id + "/picture/url\"/>"
-				const _graph = "https://graph.facebook.com/v2.12/"
 				let req = new XMLHttpRequest()
 				req.open("GET", _graph + id , true);
 				req.onreadystatechange = () => {
 					if(req.readyState == 4 && req.status == 200) {
-							let myInfo = JSON.parse(req.responseText).data
+							let myInfo = JSON.parse(req.responseText)
 							let name = document.getElementById("name")
 							name.innerHTML = myInfo.name
 					}
 				}
 				req.send();
-			}
 			}
 			let goBack = () => {
 				window.location("/friends")
