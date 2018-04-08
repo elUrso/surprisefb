@@ -10,7 +10,7 @@
 		<container>
 			<header>
 				<back href="/friends" onclick="goBack()">
-          <i class="material-icons" style="font-size: 1.5em;">arrow_back</i>
+          <i class="material-icons" style="font-size: 3em;">arrow_back</i>
 				</back>
 			</header>
 			<me id="me">
@@ -56,7 +56,7 @@
 				req.send();
 			}
 			function goBack() {
-				location.replace("/friends")
+				document.location.href = "/friends";
 			}
 		</script>
 	</body>
