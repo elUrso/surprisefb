@@ -120,7 +120,8 @@ app.post('/oauth', (req, res) => {
 )})
 
 app.get("/usertoken", (req, res) => {
-	let c, t, et
+	let c, t, et, n;
+	n = Number(req.cookies.session)
 	console.log(req)
 	c = req.query.code
 	console.log(c)
@@ -128,6 +129,7 @@ app.get("/usertoken", (req, res) => {
 	console.log(t)
 	et = extendToken(t)
 	console.log(et)
+	db.session.update({session: n}, {session: n, token: et, valids: true})
 	console.log("Gud Luck")
 	res.send("Hi!")
 })
