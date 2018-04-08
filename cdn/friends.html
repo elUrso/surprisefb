@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>
+			Surprise : Friends
+		</title>
+		<style>
+		</style>
+	</head>
+	<body onload="getLista()">
+		<container>
+			<header>
+				<user>
+					User
+				</user>
+				<search>
+					Search
+				</search>
+			</header>
+			<friends id="friendList">
+			</friends>
+		</container>
+		<script>
+			let _f = (x) => "<div class=\"friend\"><img src=" + x + " alt=\"\"></div>"
+			let getLista = () => {
+				let req = new XMLHttpRequest()
+				var friends = "/friendList"
+				req.open("GET", friends, true);
+				req.onreadystatechange = () => {
+					if(req.readyState == 4 && req.status == 200) {
+							const _graph = "https://graph.facebook.com/v2.12/"
+							let friendlist = JSON.parse(req.responseText).data
+							let html = document.getElementById("friendList")
+							console.log(friendlist)
+							html.innerHTML = friendlist.friends.map((x) => x.id).map((x) => x + "/picture/url").map((x) => _graph + x).map(_f).join("")
+					}
+				}
+				req.send();	
+			}
+		</script>
+	</body>
+</html>
