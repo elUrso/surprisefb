@@ -99,8 +99,9 @@ app.post('/oauth', (req, res) => {
 
 app.get("/usertoken", (req, res) => {
 	console.log(req)
+	console.log(req.query.code)
+	console.log(genToken(req.query.code))
 	res.send("Hi!")
-
 })
 
 app.listen(port, () => {
