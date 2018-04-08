@@ -52,7 +52,7 @@ me #image {
   margin-bottom: 1.5em;
 
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
   padding: 0.5em;
@@ -63,16 +63,6 @@ me #image {
   width: 90vw;
 }
 
-content2 {
-	display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-content {
-	align-self: flex-end;
-}
 
 .img-pr {
   height: 70%;
@@ -105,16 +95,5 @@ category {
 
   min-height: 2.5em;
   text-align: center;
-}
-
-.buy-mini-button {
-  background: #00B600;
-  color: #000000;
-
-  min-width: 15vw;
-  border-radius: 0.5em;
-
-  margin-bottom: 0.5em;
-  margin-left: 40vw;
 }
 
