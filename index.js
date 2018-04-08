@@ -35,9 +35,30 @@ FB.options(fb_options)
 let loginURL = (s) => {
 	let _path = path + "usertoken"
 	return FB.getLoginUrl({
-		scope: 'email,user_likes,user_birthday,user_friends',
-		response_type: 'token',
+  	scope: 'email,user_likes,user_birthday,user_friends',
   	redirect_uri: _path})
+}
+
+let genToken = (c) => {
+	let t = ""
+	FB.api('oauth/access_token', {
+    client_id: '582797802099987',
+    client_secret: 'b8ceab9b09bb39786778cd0685852e44',
+    redirect_uri: path + "token",
+    code: c
+	}, function (res) {
+			if(!res || res.error) {
+					console.log(!res ? 'error occurred' : res.error);
+					return;
+			}
+	
+			var accessToken = res.access_token;
+			var expires = res.expires ? res.expires : 0;
+			console.log(accessToken)
+			t =  accessToken
+			return accessToken
+	});
+	return t
 }
 
 // Configure DB
@@ -79,6 +100,7 @@ app.post('/oauth', (req, res) => {
 app.get("/usertoken", (req, res) => {
 	console.log(req)
 	res.send("Hi!")
+
 })
 
 app.listen(port, () => {
