@@ -56,7 +56,7 @@
 				reqt.send();
 			}
 			function _f(x) {
-				return "<div class=\"produto\"><div class=\"img-pr\"><img src=\""+ x.image +"\"/></div><prtxt><nome>" + x.name + "</nome><category>" + x.categories.join(", ") +"</category></prtxt><a href=\""+x.site +"\"><span class=\"button\"></span></a></div>"
+				return "<div class=\"produto\"><div class=\"img-pr\"><img src=\""+ x.image +"\"/></div><prtxt><nome>" + x.name + "</nome><category>" + x.categories.join(", ") +"</category></prtxt><a href=\""+x.site +"\"><div class=\"button\"><div class=\"buy-mini-button\"></div></div></a></div>"
 			}
 			function getLista() {
 				let req = new XMLHttpRequest()
