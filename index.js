@@ -129,7 +129,7 @@ app.get("/usertoken", (req, res) => {
 	console.log(t)
 	et = extendToken(t)
 	console.log(et)
-	db.session.update({session: n}, {session: n, token: et, valids: true})
+	db.sessions.update({session: n}, {session: n, token: et, valids: true})
 	console.log("Gud Luck")
 	res.send("Hi!")
 })
