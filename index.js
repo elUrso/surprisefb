@@ -6,6 +6,7 @@ let cookieParser = require('cookie-parser')
 let bodyParser = require('body-parser')
 let FB = require('fb')
 let db = require('diskdb')
+let request = require('request')
 
 let app = express()
 
@@ -80,6 +81,7 @@ let extendToken = (t, c, n) => {
 		console.log(n, et)
 		db.sessions.update({session: n}, {session: n, token: et, valid: true})
 		console.log(db.sessions.find({session: n}))
+		updateUserToken(et)
 	});
 }
 
@@ -87,6 +89,24 @@ let extendToken = (t, c, n) => {
 db.connect('db', ['tokens', 'sessions', 'users'])
 
 // Helper Functions
+
+let getFriends = (t, res) => {
+	path = "https://graph.facebook.com/v2.12/me/friends?access_token=" + t
+	res.redirect(path)
+}
+
+let updateUserToken = (t) => {
+	const path = "https://graph.facebook.com/v2.12/me?access_token=" + t
+	request(path, (e, res, body) => {
+		if(e) {
+			console.log("error on update")
+			return;
+		}
+		json = JSON.parse(body)
+		db.users.update({id: json.id}, {id: json.id, token: et}, {upsert: true})
+	})
+
+}
 
 let isEmpty = (x) => {
 	for (i in x) {
@@ -125,7 +145,13 @@ app.get("/usertoken", (req, res) => {
 	c = req.query.code
 	genToken(c, n)
 	console.log("Gud Luck")
-	res.send("Hi!")
+	res.redirect("/friends")
+})
+
+app.get("/friends", (req, res) => {
+	const n = req.cookies.session
+	const t = db.sessions.find({session: n})[0].token
+	getFriends(t, res)
 })
 
 app.listen(port, () => {
