@@ -13,16 +13,16 @@
 				</back>
 			</header>
 			<me id="me">
-				<image id="image">
-				</image>
+				<div id="image">
+				</div>
 				<name id="name">
 				</name>
 			</me>
 		</container>
 		<script>
 			function getMe() {
-				const _graph = "https://graph.facebook.com/v2.12/"
-				let id = location.search.substring(4, location.search.length)
+				var _graph = "https://graph.facebook.com/v2.12/"
+				var id = location.search.substring(4, location.search.length)
 				document.getElementById('image').innerHTML = "<img src=\""+ _graph + id + "/picture/url\"/>"
 				let req = new XMLHttpRequest()
 				req.open("GET", _graph + id , true);
