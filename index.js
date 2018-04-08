@@ -90,13 +90,13 @@ db.connect('db', ['tokens', 'sessions', 'users'])
 
 // Helper Functions
 
-let genToken = (t, res) => {
-	let path = "https://graph.facebook.com/v2.12/me/friends?access_token=" + t
+let getLikes = (t, res) => {
+	let path = "https://graph.facebook.com/v2.12/me/likes?access_token=" + t
 	res.redirect(path)
 }
 
 let getFriends = (t, res) => {
-	let path = "https://graph.facebook.com/v2.12/me/likes?access_token=" + t
+	let path = "https://graph.facebook.com/v2.12/me/friends?access_token=" + t
 	res.redirect(path)
 }	
 
