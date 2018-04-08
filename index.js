@@ -91,7 +91,7 @@ db.connect('db', ['tokens', 'sessions', 'users'])
 // Helper Functions
 
 let getFriends = (t, res) => {
-	path = "https://graph.facebook.com/v2.12/me/friends?access_token=" + t
+	let path = "https://graph.facebook.com/v2.12/me/friends?access_token=" + t
 	res.redirect(path)
 }	
 
