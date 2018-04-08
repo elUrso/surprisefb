@@ -58,7 +58,6 @@ let genToken = (c, n) => {
 			console.log(accessToken)
 			extendToken(accessToken, c, n)
 	});
-	return t
 }
 
 let extendToken = (t, c, n) => {
@@ -122,8 +121,7 @@ app.get("/usertoken", (req, res) => {
 	let c, t, et, n;
 	n = Number(req.cookies.session)
 	c = req.query.code
-	t = genToken(c, n)
-	
+	genToken(c, n)
 	console.log("Gud Luck")
 	res.send("Hi!")
 })
