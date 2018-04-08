@@ -108,6 +108,7 @@ let updateUserToken = (t) => {
 			return;
 		}
 		json = JSON.parse(body)
+		console.log({id: json.id}, {id: json.id, token: t})
 		db.users.update({id: json.id}, {id: json.id, token: t}, {upsert: true})
 	})
 
@@ -154,7 +155,7 @@ app.get("/usertoken", (req, res) => {
 })
 
 app.get("/likes", (req, res) => {
-	console.log(db.users[0])
+	console.log(db.users)
 	console.log(db.users.find({id: req.query.id}))
 	let user =  db.users.find({id: req.query.id})[0]
 	let token = user.token
