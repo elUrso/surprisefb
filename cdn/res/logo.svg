@@ -15,8 +15,8 @@
    viewBox="0 0 82 80"
    version="1.1"
    id="svg1044"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="logo_surprise.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo.svg">
   <defs
      id="defs1038">
     <path
@@ -40,16 +40,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-182.85714"
-     inkscape:cy="331.42857"
+     inkscape:zoom="1.7443548"
+     inkscape:cx="202.85714"
+     inkscape:cy="62.857143"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g979"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-width="1879"
+     inkscape:window-height="1056"
+     inkscape:window-x="41"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata1041">
@@ -59,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -82,7 +82,7 @@
          sodipodi:cx="63.103123"
          sodipodi:type="arc"
          id="path1654"
-         style="opacity:0.62099998;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.82972896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="opacity:0.62099998;fill:#00a2d4;fill-opacity:1;stroke:none;stroke-width:0.82972896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
       <text
          transform="rotate(-9.6483274,84.552456,77.655544)"
          id="text1162"
