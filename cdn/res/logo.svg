@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="82mm"
+   height="80mm"
+   viewBox="0 0 82 80"
+   version="1.1"
+   id="svg1044"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="logo_surprise.svg">
+  <defs
+     id="defs1038">
+    <path
+       style="opacity:0.41000001;fill:none;fill-opacity:1;stroke:none;stroke-width:0.25982147;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1534"
+       sodipodi:type="arc"
+       sodipodi:cx="-33.182739"
+       sodipodi:cy="117.64302"
+       sodipodi:rx="38.091705"
+       sodipodi:ry="37.529255"
+       sodipodi:start="0"
+       sodipodi:end="6.2740398"
+       sodipodi:open="true"
+       d="M 4.9089661,117.64302 A 38.091705,37.529255 0 0 1 -33.095647,155.17218 38.091705,37.529255 0 0 1 -71.274046,117.81463 38.091705,37.529255 0 0 1 -33.444013,80.114649 38.091705,37.529255 0 0 1 4.9073731,117.2998"
+       transform="matrix(-0.97099227,0.23911089,0.23664971,0.97159504,0,0)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-182.85714"
+     inkscape:cy="331.42857"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1041">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217)">
+    <g
+       id="g979"
+       transform="matrix(1.0029815,0,0,1.0053732,-22.291267,140.71684)">
+      <path
+         d="M 103.98124,115.66169 A 40.87812,39.786221 0 0 1 63.196585,155.44781 40.87812,39.786221 0 0 1 22.22543,115.84362 40.87812,39.786221 0 0 1 62.822737,75.876405 40.87812,39.786221 0 0 1 103.97953,115.29783"
+         sodipodi:open="true"
+         sodipodi:end="6.2740398"
+         sodipodi:start="0"
+         sodipodi:ry="39.786221"
+         sodipodi:rx="40.87812"
+         sodipodi:cy="115.66169"
+         sodipodi:cx="63.103123"
+         sodipodi:type="arc"
+         id="path1654"
+         style="opacity:0.62099998;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.82972896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+      <text
+         transform="rotate(-9.6483274,84.552456,77.655544)"
+         id="text1162"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:MathJax_SansSerif;-inkscape-font-specification:'MathJax_SansSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><textPath
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.875px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:3.76766682px;writing-mode:lr-tb;text-anchor:start;fill:#ffb380;stroke-width:0.26458332"
+           id="textPath1536"
+           xlink:href="#path1534">urprise!</textPath></text>
+      <path
+         sodipodi:nodetypes="czssac"
+         inkscape:connector-curvature="0"
+         id="path1666"
+         d="m 64.822916,122.54905 c 0,0 -5.011764,6.08372 -10.649479,5.28255 -5.637715,-0.80116 -10.554519,-7.54058 -13.041656,-16.33001 -2.564844,-9.06405 -5.51344,-6.75061 -6.074489,-4.19834 -0.886504,4.03279 0.851594,8.24485 -2.116666,9.22774 -2.275691,0.75355 -5.448766,-4.73305 -5.448766,-4.73305"
+         style="fill:none;stroke:#e3dbdb;stroke-width:1.16900003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         style="fill:#de8787"
+         transform="matrix(1.7490744,0.5094536,-0.53257289,1.7738349,34.804611,-106.77376)"
+         id="g1648">
+        <path
+           style="fill:#de8787;stroke:none;stroke-width:0.3259103;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 51.820605,112.32765 c 0,0 -1.960754,0.25617 -2.538507,2.50416 0,0 1.308206,1.26113 2.528909,0.0269 1.220702,-1.23415 1.906461,0.50954 1.906461,0.50954 0,0 -0.248609,-2.46112 -1.896862,-3.04068 z"
+           id="path1640"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#de8787;stroke:none;stroke-width:0.41064385px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 51.820606,112.32757 c 0,0 -5.122036,-7.98053 -5.155092,-12.52015 -0.03616,-4.96546 3.41706,-7.087905 6.892866,-7.191218 2.267374,-0.06739 9.261211,0.641143 8.130713,8.333678 -1.051438,7.15456 -9.868487,11.37769 -9.868487,11.37769 z"
+           id="path1644"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="csssc" />
+      </g>
+    </g>
+  </g>
+</svg>

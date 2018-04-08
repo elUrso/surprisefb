@@ -16,15 +16,15 @@
 			container {
 				grid-column: 2/3;
 				display: inline-grid;
-				grid-template-rows: auto 8em 3.2em auto;
+				grid-template-rows: auto min-content 3.2em auto;
 			}
 			logo {
 				grid-row: 2/3;
-				height: 10em;
+				height: 16em;
 				justify-self: center;
 			}
 			logo>img {
-				height: 10em;
+				height: 100%;
 				width: auto;
 			}
 			login {
@@ -53,7 +53,7 @@
 	<body onload="_body()">
 		<container>
 			<logo>
-				<img src="http://cdn.shopify.com/s/files/1/0802/9923/products/57481_grande.gif?v=1487953642">
+				<img src="/res/logo.svg">
 			</logo>
 			<login id="login">
 				<div class="blue">
