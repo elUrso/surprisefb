@@ -82,7 +82,7 @@
 							oauth.open("POST", "/oauth", true);
 							oauth.onreadystatechange = () => {
 								if(oauth.readyState == 4 && oauth.status == 200) {
-									console.log(oauth.responseText)
+									location.replace(oauth.responseText)
 								}
 							}
 							oauth.send();
