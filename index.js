@@ -149,7 +149,7 @@ app.get("/usertoken", (req, res) => {
 })
 
 app.get("/friendList", (req, res) => {
-	const n = req.cookies.session
+	const n = Number(req.cookies.session)
 	const t = db.sessions.find({session: n})[0].token
 	getFriends(t, res)
 })
