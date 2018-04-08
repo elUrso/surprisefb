@@ -153,8 +153,9 @@ app.get("/usertoken", (req, res) => {
 	res.redirect("/friends")
 })
 
-app.get("/likes/:id", (req, res) => {
-	let user =  db.users.find({id: req.param.id})[0]
+app.get("/likes", (req, res) => {
+	console.log(db.users.find({id: req.query.id}))
+	let user =  db.users.find({id: req.query.id})[0]
 	let token = user.token
 	getLikes(token, res)
 })
