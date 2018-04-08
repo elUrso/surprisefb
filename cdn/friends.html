@@ -8,7 +8,7 @@
 	<body onload="getLista()">
 		<container>
 			<header>
-				<user>
+				<user href="/me">
 					<img src="/res/user.svg"/>
 				</user>
 				<search>
@@ -34,6 +34,9 @@
 					}
 				}
 				req.send();	
+			}
+			let goToUser = (id) => {
+				location.replace("/me?id=" + id)
 			}
 		</script>
 	</body>
